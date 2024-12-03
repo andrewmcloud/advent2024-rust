@@ -25,15 +25,16 @@ fn safe(report: &Vec<i32>) -> bool {
 
 fn safe2(report: &Vec<i32>) -> bool {
     (0..report.len())
-    .map(|i| {
-        let filtered: Vec<i32> = report
-            .iter()
-            .enumerate()
-            .filter(|&(j, _)| j != i)
-            .map(|(_, &x)| x)
-            .collect();
-        safe(&filtered)
-    }).any(|x| x)
+        .map(|i| {
+            let filtered: Vec<i32> = report
+                .iter()
+                .enumerate()
+                .filter(|&(j, _)| j != i)
+                .map(|(_, &x)| x)
+                .collect();
+            safe(&filtered)
+        })
+        .any(|x| x)
 }
 
 fn main() -> io::Result<()> {
