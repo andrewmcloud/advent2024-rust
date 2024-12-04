@@ -38,7 +38,7 @@ fn safe2(report: &Vec<i32>) -> bool {
 }
 
 fn main() -> io::Result<()> {
-    let reports = parse_input("../input/day2.txt");
+    let reports = parse_input("input/day2.txt");
     let part1 = reports
         .iter()
         .map(|report| { safe(report) })

@@ -43,7 +43,7 @@ fn part2(left: &Vec<i32>, right: &Vec<i32>) -> i32 {
 }
 
 fn main() -> io::Result<()> {
-    let (mut left, mut right) = parse_input("../input/day1.txt");
+    let (mut left, mut right) = parse_input("input/day1.txt");
     println!("{}", part1(&mut left, &mut right));
     println!("{}", part2(&left, &right));
     Ok(())
